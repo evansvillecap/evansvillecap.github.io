@@ -26,17 +26,38 @@
 			font-family: "Nunito", Nunito;
 			font-weight: bold;
 			text-align: center;
+			color: white;
 			background-color: rgb(97, 189, 109);
 			border-radius: 15px;
 			-moz-border-radius: 15px;
 			z-index: 2;
 		}
+
+		#close
+		{
+			position:absolute;
+			top: 3%;
+			right: 5%;
+			font-size: small;
+			font-family: "Nunito", Nunito;		  
+		}
 	</style>
+	<script type="text/javascript">
+	function hide() {
+		var x = document.getElementById("pdfprint");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	} 
+	</script>
 </head>
 <body>
 	<div style="position: relative;">
 		<a href="https://github.com/evansvillecap/evansvillecap.github.io/raw/main/evansvillecap.pdf" download>
 			<div id="pdfprint">
+				<div id="close"><a href="#" onclick="hide()">x</a></div>
 				<p><span class="mdi mdi-earth"></span> Download the CAP (PDF)</p>
 			</div>
 		</a>
